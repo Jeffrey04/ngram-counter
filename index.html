@@ -35,10 +35,11 @@
       <div class="row gx-5">
         <div class="col-6">
           <div class="card">
-            <div class="card-body">
+            <div class="card-header">
               <h5 class="card-title">輸入內容</h5>
-
-              <p>右邊的詞頻統計將會在輸入中時即時更新。</p>
+            </div>
+            <div class="card-body">
+              <p>右邊的詞頻統計將會在輸入時即時更新。</p>
 
               <div class="form-floating">
                 <textarea
@@ -50,13 +51,20 @@
                 <label for="floatingTextarea">內容</label>
               </div>
             </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" id="refresh">
+                手動更新統計
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-6" style="height: 60em; overflow-y: auto">
           <div class="card mb-3">
-            <div class="card-body">
+            <div class="card-header">
               <h5 class="card-title">4-Grams</h5>
-
+            </div>
+            <div class="card-body" id="4gram"></div>
+            <div class="card-footer">
               <div class="form-floating">
                 <select
                   class="form-select form-select-sm my-3"
@@ -73,16 +81,16 @@
                   <option>9</option>
                   <option>10</option>
                 </select>
-                <label for="floatingSelect">只顯示最少出現次數</label>
+                <label for="floatingSelect">只顯示出現多於次數</label>
               </div>
-
-              <div id="4gram"></div>
             </div>
           </div>
           <div class="card mb-3">
-            <div class="card-body">
+            <div class="card-header">
               <h5 class="card-title">3-Grams</h5>
-
+            </div>
+            <div class="card-body" id="3gram"></div>
+            <div class="card-footer">
               <div class="form-floating">
                 <select
                   class="form-select form-select-sm my-3"
@@ -99,16 +107,16 @@
                   <option>9</option>
                   <option>10</option>
                 </select>
-                <label for="floatingSelect">只顯示最少出現次數</label>
+                <label for="floatingSelect">只顯示出現多於次數</label>
               </div>
-
-              <div id="3gram"></div>
             </div>
           </div>
           <div class="card mb-3">
-            <div class="card-body">
+            <div class="card-header">
               <h5 class="card-title">2-Grams</h5>
-
+            </div>
+            <div class="card-body" id="2gram"></div>
+            <div class="card-footer">
               <div class="form-floating">
                 <select
                   class="form-select form-select-sm my-3"
@@ -125,16 +133,16 @@
                   <option>9</option>
                   <option>10</option>
                 </select>
-                <label for="floatingSelect">只顯示最少出現次數</label>
+                <label for="floatingSelect">只顯示出現多於次數</label>
               </div>
-
-              <div id="2gram"></div>
             </div>
           </div>
           <div class="card mb-3">
-            <div class="card-body">
+            <div class="card-header">
               <h5 class="card-title">1-Grams</h5>
-
+            </div>
+            <div class="card-body" id="1gram"></div>
+            <div class="card-footer">
               <div class="form-floating">
                 <select
                   class="form-select form-select-sm my-3"
@@ -151,10 +159,8 @@
                   <option>9</option>
                   <option selected>10</option>
                 </select>
-                <label for="floatingSelect">只顯示最少出現次數</label>
+                <label for="floatingSelect">只顯示出現多於次數</label>
               </div>
-
-              <div id="1gram"></div>
             </div>
           </div>
         </div>

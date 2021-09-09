@@ -77,4 +77,8 @@ $(() => {
   $(".card select").change(() => {
     $("#content").keyup();
   });
+
+  $("#refresh").click(() => {
+    $("#content").keyup();
+  });
 });
